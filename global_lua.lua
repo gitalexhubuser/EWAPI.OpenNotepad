@@ -1,4 +1,9 @@
 -- https://github.com/gitalexhubuser/EWAPI.OpenNotepad
+
+------------------------------------------------------------
+-- ER OpenNotepad
+------------------------------------------------------------
+---
 local OriginalEWAPI = EWAPI
 
 function EWAPI()
@@ -28,5 +33,36 @@ function EWAPI()
 
     return api
 end
+
 -- /run EWAPI().OpenNotepad("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
 -- /run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
+
+------------------------------------------------------------
+-- GLOBAL OpenNotepad
+------------------------------------------------------------
+
+function OpenNotepadGlobal(path)
+    if not path or path == "" then
+        return
+    end
+
+    -- Windows path -> URL path
+    path = path:gsub("\\", "/")
+
+    -- UTF-8 URL encode
+    path = path:gsub("([^%w%-%._~/])", function(c)
+        local result = ""
+
+        for i = 1, #c do
+            result = result .. string.format("%%%02X", string.byte(c, i))
+        end
+
+        return result
+    end)
+
+    OriginalEWAPI().LaunchURL("hng://notepad/" .. path)
+end
+
+
+-- /run OpenNotepadGlobal("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
+-- /run OpenNotepadGlobal([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
