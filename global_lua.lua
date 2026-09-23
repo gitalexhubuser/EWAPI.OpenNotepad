@@ -1,3 +1,4 @@
+-- https://github.com/gitalexhubuser/EWAPI.OpenNotepad
 local OriginalEWAPI = EWAPI
 
 function EWAPI()
