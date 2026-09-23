@@ -19,15 +19,22 @@ def main():
     if parsed.netloc.lower() != "notepad":
         return
 
-    # hng://notepad/C:/test.txt
+    # Получаем путь и декодируем %XX -> UTF-8
     file_path = unquote(parsed.path)
 
+    # Убираем первый /
     if file_path.startswith("/"):
         file_path = file_path[1:]
 
+    # URL использует /, Windows нормально понимает такой путь
+    file_path = file_path.replace("/", "\\")
+
     print("Открываю:", file_path)
 
-    subprocess.Popen(["notepad.exe", file_path])
+    subprocess.Popen([
+        "notepad.exe",
+        file_path
+    ])
 
 
 if __name__ == "__main__":
