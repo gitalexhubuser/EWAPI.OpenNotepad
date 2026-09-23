@@ -10,22 +10,6 @@
 
 https://www.youtube.com/@%D0%9B%D1%83%D0%B0%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%D0%9D%D0%B0%D0%97%D0%B0%D0%BA%D0%B0%D0%B7
 
-## Wow - LaunchURL
-
-/run EWAPI().LaunchURL("https://forum.wowcircle.com/showthread.php?t=655891")
-
-/run EWAPI().LaunchURL("hng://notepad/C:/HNG/test.txt")
-
-/run EWAPI().LaunchURL("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
-
-## Wow - OpenNotepad
-
-/run OpenNotepad("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
-
-/run EWAPI().OpenNotepad("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
-
-/run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
-
 ## cmd
 
 python E:\PythonProjects\hggProtocol\hng_handler.py "hng://notepad/E:/PythonProjects/hggProtocol/test.txt"
@@ -39,6 +23,35 @@ C:\HNG\install_hng.bat
 Win+r
 
 hng://notepad/C:/HNG/test.txt
+
+---
+
+# EWAPI.OpenNotepad
+
+## Lua
+
+Устанавливаем `global_lua.lua` в любой аддон
+
+## Wow - LaunchURL (пример)
+
+/run EWAPI().LaunchURL("https://forum.wowcircle.com/showthread.php?t=655891")
+
+/run EWAPI().LaunchURL("hng://notepad/C:/HNG/test.txt")
+
+/run EWAPI().LaunchURL("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
+
+## Wow - OpenNotepad (релиз)
+
+```bash
+# Вариант 1 (если глобальная функция)
+/run OpenNotepad("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
+
+# Вариант 2
+/run EWAPI().OpenNotepad("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
+
+# Вариант 3
+/run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
+```
 
 # Link
 https://github.com/gitalexhubuser/EWAPI-.OpenNotepad
