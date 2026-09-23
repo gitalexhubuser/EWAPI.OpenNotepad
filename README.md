@@ -54,4 +54,4 @@ hng://notepad/C:/HNG/test.txt
 ```
 
 # Link
-https://github.com/gitalexhubuser/EWAPI-.OpenNotepad
+https://github.com/gitalexhubuser/EWAPI.OpenNotepad
