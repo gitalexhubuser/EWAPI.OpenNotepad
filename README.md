@@ -1,5 +1,9 @@
 # HNG
 
+## Описание
+
+В Wow(е) добавляем функционал, чтоб открывать файлы в блокноте, в винде через свой `hng протокол` и `библиотеку [ER](http://erotation.ru/)`
+
 ## Wow
 
 /run EWAPI().LaunchURL("https://forum.wowcircle.com/showthread.php?t=655891");
@@ -23,3 +27,6 @@ C:\HNG\install_hng.bat
 
 Win+r
 hng://notepad/C:/HNG/test.txt
+
+# Link
+https://github.com/new
