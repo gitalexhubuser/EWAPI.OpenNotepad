@@ -4,16 +4,21 @@
 
 В Wow(е) добавляем функционал, чтоб открывать файлы в блокноте, в винде через свой `hng протокол` и `библиотеку [ER](http://erotation.ru/)`
 
-## Wow
+## Wow - LaunchURL
 
-/run EWAPI().LaunchURL("https://forum.wowcircle.com/showthread.php?t=655891");
+/run EWAPI().LaunchURL("https://forum.wowcircle.com/showthread.php?t=655891")
+
 /run EWAPI().LaunchURL("hng://notepad/C:/HNG/test.txt")
-/run EWAPI().LaunchURL("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
-/run OpenNotepad("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
-/run EWAPI().OpenNotepad("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
 
--- /run EWAPI().OpenNotepad("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
--- /run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
+/run EWAPI().LaunchURL("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
+
+## Wow - OpenNotepad
+
+/run OpenNotepad("hng://notepad/D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt")
+
+/run EWAPI().OpenNotepad("D:\\Byster\\Interface\\AddOns\\_GM[AdminskieUtehi3]\\Шмотки\\Шмотки на мм ханта.txt")
+
+/run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
 
 ## cmd
 
@@ -26,7 +31,8 @@ C:\HNG\install_hng.bat
 ## Protocol
 
 Win+r
+
 hng://notepad/C:/HNG/test.txt
 
 # Link
-https://github.com/new
+https://github.com/gitalexhubuser/EWAPI-.OpenNotepad
