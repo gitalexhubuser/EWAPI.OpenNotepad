@@ -16,13 +16,19 @@ python E:\PythonProjects\hggProtocol\hng_handler.py "hng://notepad/E:/PythonProj
 
 ## Install
 
-C:\HNG\install_hng.bat
+Просто запустите `install_hng.bat` из любой папки (пути к Python и скрипту определятся автоматически):
+
+```cmd
+install_hng.bat
+```
+
+Для удаления протокола: `uninstall_hng.bat`.
 
 ## Protocol
 
 Win+r
 
-hng://notepad/C:/HNG/test.txt
+hng://notepad/C:/путь/к/файлу/test.txt
 
 ---
 
@@ -51,6 +57,11 @@ hng://notepad/C:/HNG/test.txt
 
 # Вариант 3
 /run EWAPI().OpenNotepad([[D:\Byster\Interface\AddOns\_GM[AdminskieUtehi3]\Шмотки\Шмотки на мм ханта.txt]])
+```
+
+## Для проверки нажмите Win + R и введите:
+```text
+hng://notepad/C:/test.txt
 ```
 
 # Link

@@ -100,8 +100,12 @@ def main():
     print()
     print("Открываю файл...")
 
+    notepad_path = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "notepad.exe")
+    if not os.path.exists(notepad_path):
+        notepad_path = "notepad.exe"
+
     subprocess.Popen([
-        r"C:\Windows\System32\notepad.exe",
+        notepad_path,
         file_path
     ])
 
